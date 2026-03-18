@@ -1,0 +1,13 @@
+.modal-body h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.modal-body p {
+  margin-top: 20px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}

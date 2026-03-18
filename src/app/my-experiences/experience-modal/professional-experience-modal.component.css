@@ -1,0 +1,18 @@
+.modal-body h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.modal-body ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.modal-body ul li {
+  margin-bottom: 10px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}

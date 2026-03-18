@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<main *ngIf="!isProjectDetailsPage">
+  <section id="personal-data" class="section">
+    <app-personal-data></app-personal-data>
+  </section>
+  <section id="profile" class="section">
+    <app-profile></app-profile>
+  </section>
+  <section id="professional-experiences" class="section">
+    <app-professional-experiences></app-professional-experiences>
+  </section>
+  <section id="skills" class="section">
+    <app-skills></app-skills>
+  </section>
+  <section id="education" class="section">
+    <app-education></app-education>
+  </section>
+  <section id="projects" class="section">
+    <app-projects></app-projects>
+  </section>
+  <section id="github-dashboard" class="section">
+    <app-github-dashboard></app-github-dashboard>
+  </section>
+</main>
+<main *ngIf="isProjectDetailsPage">
+  <router-outlet></router-outlet>
+</main>
+<app-footer></app-footer>
