@@ -71,8 +71,7 @@ export function Navbar() {
             href="/"
             onClick={e => { e.preventDefault(); scrollToSection('personal-data'); }}
           >
-            <div className={styles.logoIcon}><i className="fas fa-code" /></div>
-            Rodolfo<span>.dev</span>
+            Rodolfo <span>Silva</span>
           </a>
 
           <ul className={styles.desktopNav}>{navItems}</ul>

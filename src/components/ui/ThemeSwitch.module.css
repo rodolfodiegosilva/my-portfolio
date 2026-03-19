@@ -1,49 +1,46 @@
 .btn {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  border: 1.5px solid transparent;
+  border: 2px solid transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 0;
-  position: relative;
-  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+  flex-shrink: 0;
 }
 
-.btn:hover { transform: scale(1.12) rotate(15deg); }
+.btn:hover {
+  transform: scale(1.1) rotate(12deg);
+}
 
-/* Tema claro → mostra lua (vai mudar para escuro) */
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Tema claro → mostra lua → vai mudar para escuro */
 .isLight {
   background: #e8eaf6;
-  border-color: #b9c0e8;
-  color: #4a55a2;
-  box-shadow: 0 2px 8px rgba(74, 85, 162, 0.15);
+  border-color: #9fa8da;
+  color: #3949ab;
+  box-shadow: 0 2px 8px rgba(57, 73, 171, 0.18);
 }
-.isLight:hover { box-shadow: 0 4px 14px rgba(74, 85, 162, 0.28); }
 
-/* Tema escuro → mostra sol (vai mudar para claro) */
+.isLight:hover {
+  background: #c5cae9;
+  box-shadow: 0 4px 14px rgba(57, 73, 171, 0.30);
+}
+
+/* Tema escuro → mostra sol → vai mudar para claro */
 .isDark {
-  background: rgba(251, 191, 36, 0.18);
-  border-color: rgba(251, 191, 36, 0.45);
+  background: rgba(251, 191, 36, 0.15);
+  border-color: rgba(251, 191, 36, 0.50);
   color: #fbbf24;
-  box-shadow: 0 2px 8px rgba(251, 191, 36, 0.18);
-}
-.isDark:hover { box-shadow: 0 4px 14px rgba(251, 191, 36, 0.35); }
-
-/* Ícones */
-.iconWrap {
-  position: absolute;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1rem;
-  transition: opacity 0.3s ease, transform 0.4s ease;
+  box-shadow: 0 2px 8px rgba(251, 191, 36, 0.20);
 }
 
-/* Moon — visível no tema claro */
-.moonWrap { opacity: 0; transform: rotate(-30deg) scale(0.5); }
-.isLight .moonWrap { opacity: 1; transform: rotate(0deg) scale(1); }
-
-/* Sun — visível no tema escuro */
-.sunWrap { opacity: 0; transform: rotate(30deg) scale(0.5); }
-.isDark .sunWrap { opacity: 1; transform: rotate(0deg) scale(1); }
+.isDark:hover {
+  background: rgba(251, 191, 36, 0.25);
+  box-shadow: 0 4px 14px rgba(251, 191, 36, 0.35);
+}

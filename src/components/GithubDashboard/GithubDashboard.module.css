@@ -11,6 +11,13 @@
 
 .chart { overflow-x: auto; min-height: 80px; }
 
+.chart img { border-radius: 6px; }
+
+:global(html[data-theme='dark']) .chart img {
+  filter: invert(1) hue-rotate(180deg);
+  opacity: 0.88;
+}
+
 .mainLayout {
   display: grid;
   grid-template-columns: 1fr 280px;

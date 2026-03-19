@@ -32,23 +32,8 @@
         "level": "Advanced"
       },
       {
-        "name": "Angular",
-        "description": "Developed multiple applications using Angular framework.",
-        "level": "Advanced"
-      },
-      {
         "name": "TypeScript",
         "description": "Experience in using TypeScript for large-scale applications.",
-        "level": "Intermediate"
-      },
-      {
-        "name": "HTML & CSS",
-        "description": "Proficient in HTML and CSS for web development.",
-        "level": "Advanced"
-      },
-      {
-        "name": "Python",
-        "description": "Experience in Python for scripting and web development.",
         "level": "Intermediate"
       },
       {
@@ -62,13 +47,8 @@
         "level": "Intermediate"
       },
       {
-        "name": "Cypress",
-        "description": "Skilled in using Cypress for end-to-end testing.",
-        "level": "Intermediate"
-      },
-      {
-        "name": "SpringBoot",
-        "description": "Developed REST APIs using SpringBoot.",
+        "name": "AWS",
+        "description": "Cloud infrastructure with EC2, S3, Lambda, RDS, CloudFront and API Gateway.",
         "level": "Intermediate"
       },
       {
@@ -77,14 +57,29 @@
         "level": "Advanced"
       },
       {
-        "name": "Laravel",
-        "description": "Experienced in building web applications using Laravel.",
+        "name": "SpringBoot",
+        "description": "Developed REST APIs using SpringBoot.",
         "level": "Intermediate"
       },
       {
-        "name": "PHP",
-        "description": "Developed server-side logic using PHP.",
+        "name": "Angular",
+        "description": "Developed multiple applications using Angular framework.",
+        "level": "Advanced"
+      },
+      {
+        "name": "Docker",
+        "description": "Skilled in using Docker for containerization.",
         "level": "Intermediate"
+      },
+      {
+        "name": "Git",
+        "description": "Experienced in version control using Git.",
+        "level": "Advanced"
+      },
+      {
+        "name": "HTML & CSS",
+        "description": "Proficient in HTML and CSS for web development.",
+        "level": "Advanced"
       },
       {
         "name": "MySQL",
@@ -97,14 +92,14 @@
         "level": "Intermediate"
       },
       {
-        "name": "SQL",
-        "description": "Proficient in writing SQL queries.",
-        "level": "Advanced"
-      },
-      {
         "name": "MongoDB",
         "description": "Experience with MongoDB for NoSQL database management.",
         "level": "Intermediate"
+      },
+      {
+        "name": "SQL",
+        "description": "Proficient in writing SQL queries.",
+        "level": "Advanced"
       },
       {
         "name": "Linux",
@@ -112,14 +107,24 @@
         "level": "Intermediate"
       },
       {
-        "name": "Docker",
-        "description": "Skilled in using Docker for containerization.",
+        "name": "Python",
+        "description": "Experience in Python for scripting and web development.",
         "level": "Intermediate"
       },
       {
-        "name": "Git",
-        "description": "Experienced in version control using Git.",
-        "level": "Advanced"
+        "name": "Cypress",
+        "description": "Skilled in using Cypress for end-to-end testing.",
+        "level": "Intermediate"
+      },
+      {
+        "name": "Laravel",
+        "description": "Experienced in building web applications using Laravel.",
+        "level": "Intermediate"
+      },
+      {
+        "name": "PHP",
+        "description": "Developed server-side logic using PHP.",
+        "level": "Intermediate"
       }
     ],
     "levels": {
