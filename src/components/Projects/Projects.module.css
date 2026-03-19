@@ -46,7 +46,10 @@
   padding: 0.15rem 0.55rem; border-radius: 999px;
   background: rgba(46,168,255,0.10); color: var(--primary);
   border: 1px solid rgba(46,168,255,0.18);
+  display: inline-flex; align-items: center; gap: 0.3rem;
 }
+
+.tagIcon { font-size: 0.8rem; flex-shrink: 0; }
 
 .viewMore { margin-top: auto; font-size: 0.78rem; color: var(--primary); font-weight: 600; display: flex; align-items: center; gap: 0.3rem; }
 
@@ -66,7 +69,10 @@
   border: 1px solid rgba(46,168,255,0.2);
   padding: 0.25rem 0.65rem; border-radius: 999px;
   font-size: 0.72rem; font-weight: 600;
+  display: inline-flex; align-items: center; gap: 0.35rem;
 }
+
+.pillIcon { font-size: 0.95rem; flex-shrink: 0; }
 
 .modalLinks { display: flex; gap: 0.75rem; flex-wrap: wrap; }
 

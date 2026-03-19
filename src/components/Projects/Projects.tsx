@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useProjects } from '../../hooks/useProjects';
 import { Modal } from '../ui/Modal';
 import { Carousel } from '../ui/Carousel';
+import { TechIcon } from '../../utils/techIcons';
 import type { Project } from '../../types/project.types';
 import styles from './Projects.module.css';
 
@@ -32,7 +33,10 @@ export function Projects() {
                 <p className={styles.desc}>{p.description}</p>
                 <div className={styles.tags}>
                   {p.technologies.slice(0, 4).map(tech => (
-                    <span key={tech} className={styles.tag}>{tech}</span>
+                    <span key={tech} className={styles.tag}>
+                      <TechIcon name={tech} className={styles.tagIcon} size={11} />
+                      {tech}
+                    </span>
                   ))}
                   {p.technologies.length > 4 && <span className={styles.tag}>+{p.technologies.length - 4}</span>}
                 </div>
@@ -51,7 +55,12 @@ export function Projects() {
             <div className={styles.modalTech}>
               <p className={styles.techTitle}>Tecnologias</p>
               <div className={styles.techPills}>
-                {selected.technologies.map(tech => <span key={tech} className={styles.techPill}>{tech}</span>)}
+                {selected.technologies.map(tech => (
+                  <span key={tech} className={styles.techPill}>
+                    <TechIcon name={tech} className={styles.pillIcon} size={13} />
+                    {tech}
+                  </span>
+                ))}
               </div>
             </div>
             <div className={styles.modalLinks}>

@@ -1,107 +1,134 @@
-# My Portfolio
+<div align="center">
 
-Portfolio pessoal desenvolvido em **React + Vite + TypeScript**, com suporte a tema claro/escuro, internacionalização (PT/EN) e design responsivo.
+# Rodolfo Silva — Personal Portfolio
 
-🔗 **Live:** [rodolfo-silva.com](https://rodolfo-silva.com)
+A modern, responsive personal portfolio built with **React 19 + Vite + TypeScript**, featuring dark/light theming, full internationalization (EN/PT), a live GitHub dashboard, and automated CI/CD deployment on AWS Amplify.
 
----
+[![Live](https://img.shields.io/badge/Live-rodolfo--silva.com-2ea8ff?style=for-the-badge&logo=amazonaws)](https://rodolfo-silva.com)
+[![React](https://img.shields.io/badge/React-19-61dafb?style=for-the-badge&logo=react)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.6-3178c6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org)
+[![Vite](https://img.shields.io/badge/Vite-6-646cff?style=for-the-badge&logo=vite)](https://vitejs.dev)
+[![AWS Amplify](https://img.shields.io/badge/AWS-Amplify-ff9900?style=for-the-badge&logo=awsamplify)](https://aws.amazon.com/amplify)
 
-## ✨ Funcionalidades
-
-- 🌗 **Tema claro/escuro** — alternância com persistência em `localStorage`
-- 🌐 **Internacionalização PT/EN** — via `react-i18next` com carregamento dinâmico dos JSONs
-- 📱 **Totalmente responsivo** — menu hamburguer, grids adaptativos, "Ver mais/menos" no mobile
-- 🐙 **GitHub Dashboard** — repos e atividade recentes via API pública do GitHub
-- 🚀 **Deploy automático** — AWS Amplify com CI/CD integrado ao GitHub
-- ♿ **Acessibilidade** — `aria-labels`, `aria-expanded`, foco visível, `role="dialog"`
+</div>
 
 ---
 
-## 🏗️ Stack
+## Features
 
-| Categoria | Tecnologia |
-|-----------|-----------|
+| Feature | Description |
+|---|---|
+| 🌗 **Dark / Light Theme** | One-click toggle with preference persisted in `localStorage` |
+| 🌐 **EN / PT i18n** | Full internationalization via `react-i18next` with lazy-loaded JSON files |
+| 📱 **Fully Responsive** | Hamburger menu, adaptive grids, "Show more / less" on mobile |
+| 🐙 **GitHub Dashboard** | Real-time repos and recent activity via the public GitHub API |
+| 🚀 **Project Showcase** | Interactive cards with image carousel, tech stack pills with icons, and live demo links |
+| ♿ **Accessibility** | `aria-labels`, `aria-expanded`, visible focus, `role="dialog"` throughout |
+| ⚡ **CI/CD** | Automatic deploys via AWS Amplify on every push to `main` |
+
+---
+
+## Tech Stack
+
+| Category | Technology |
+|---|---|
 | Framework | React 19 |
-| Build tool | Vite 6 |
-| Linguagem | TypeScript 5.6 |
-| Roteamento | react-router-dom v7 |
-| i18n | react-i18next + i18next-http-backend |
-| Estilo | CSS Modules + CSS Variables |
-| Deploy | AWS Amplify |
+| Build Tool | Vite 6 |
+| Language | TypeScript 5.6 |
+| Routing | react-router-dom v7 |
+| Internationalization | react-i18next + i18next-http-backend |
+| Styling | CSS Modules + CSS Custom Properties |
+| Icons | Devicon v2 + Font Awesome 5 (CDN) |
+| Deployment | AWS Amplify |
 
 ---
 
-## 📁 Estrutura
+## Project Structure
 
 ```
 src/
 ├── components/
-│   ├── ui/                  # Modal, Carousel, ThemeSwitch, ToggleButton, ShowMoreButton
+│   ├── ui/                        # Modal, Carousel, ThemeSwitch, ShowMoreButton
 │   ├── Navbar/
 │   ├── Footer/
-│   ├── PersonalData/        # Hero section
+│   ├── PersonalData/              # Hero section
 │   ├── Profile/
-│   ├── Skills/
-│   ├── Education/           # Graus + Certificações com modais
+│   ├── Skills/                    # Skills grid with progress bars
+│   ├── Education/                 # Degrees & certifications with modals
 │   ├── ProfessionalExperiences/
-│   ├── Projects/            # Cards + modal com carousel
-│   ├── ProjectDetails/      # Página /project/:name
+│   ├── Projects/                  # Cards + modal with image carousel
+│   ├── ProjectDetails/            # Full detail page at /project/:name
 │   └── GithubDashboard/
 ├── contexts/
-│   ├── ThemeContext.tsx      # Light / Dark mode
-│   └── LanguageContext.tsx   # PT / EN
+│   ├── ThemeContext.tsx            # Light / Dark mode
+│   └── LanguageContext.tsx         # EN / PT
 ├── hooks/
-│   ├── useGithub.ts          # Repos e atividade da API GitHub
-│   ├── useProjects.ts        # Projetos dos JSONs de i18n
-│   └── useIsMobile.ts        # Breakpoint detector
-├── types/                    # Interfaces TypeScript
+│   ├── useGithub.ts               # Repos and activity from GitHub API
+│   ├── useProjects.ts             # Projects loaded from i18n JSONs
+│   └── useIsMobile.ts             # Responsive breakpoint detector
+├── utils/
+│   └── techIcons.tsx              # Shared tech icon map & TechIcon component
+├── types/                         # TypeScript interfaces
 ├── styles/
-│   └── global.css            # CSS Variables, reset, layout base
-└── i18n.ts                   # Configuração do i18next
+│   └── global.css                 # CSS variables, reset, base layout
+└── i18n.ts                        # i18next configuration
 
 public/
 ├── locales/
-│   ├── en/translation.json
-│   └── pt/translation.json
-└── icons/                    # SVGs das tecnologias
+│   ├── en/translation.json        # English content
+│   └── pt/translation.json        # Portuguese content
+└── icons/                         # Technology SVG icons
 ```
 
 ---
 
-## 🚀 Desenvolvimento
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm 9+
+
+### Installation
 
 ```bash
-# Instalar dependências
+# Clone the repository
+git clone https://github.com/rodolfodiegosilva/my-portfolio.git
+cd my-portfolio
+
+# Install dependencies
 npm install
-
-# Rodar em desenvolvimento
-npm run dev
-
-# Build de produção
-npm run build
-
-# Preview do build
-npm run preview
 ```
 
----
+### Environment Variables
 
-## 🌐 Variáveis de ambiente
-
-Crie um arquivo `.env` na raiz:
+Create a `.env` file at the project root:
 
 ```env
 VITE_GITHUB_USERNAME=rodolfodiegosilva
 ```
 
+### Development
+
+```bash
+# Start dev server
+npm run dev
+
+# Production build
+npm run build
+
+# Preview production build locally
+npm run preview
+```
+
 ---
 
-## 🎨 Design System
+## Design System
 
-O projeto usa CSS Variables para garantir consistência e suporte a temas:
+The project uses CSS Custom Properties for consistent theming across light and dark modes:
 
-| Variável | Claro | Escuro |
-|----------|-------|--------|
+| Variable | Light | Dark |
+|---|---|---|
 | `--bg` | `#f6f9ff` | `#253448` |
 | `--surface` | `rgba(255,255,255,0.92)` | `#2e4160` |
 | `--text` | `#0a0f1e` | `#e4eef8` |
@@ -111,9 +138,9 @@ O projeto usa CSS Variables para garantir consistência e suporte a temas:
 
 ---
 
-## ☁️ Deploy (AWS Amplify)
+## Deployment
 
-O arquivo `amplify.yml` já está configurado para build Vite:
+The project is deployed on **AWS Amplify** with automatic builds triggered by pushes to `main`. The `amplify.yml` configuration:
 
 ```yaml
 version: 1
@@ -133,6 +160,12 @@ frontend:
 
 ---
 
-## 📄 Licença
+## License
 
-MIT © Rodolfo Silva
+MIT © [Rodolfo Silva](https://rodolfo-silva.com)
+
+
+aws amplify update-app \
+  --app-id d1er6cwuop5atf \
+  --profile conta-aws \
+  --environment-variables VITE_GITHUB_USERNAME=rodolfodiegosilva,VITE_GITHUB_TOKEN=ghp_SEU_TOKEN_AQUI

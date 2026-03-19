@@ -6,7 +6,7 @@ i18n
   .use(HttpBackend)
   .use(initReactI18next)
   .init({
-    lng: localStorage.getItem('portfolio.language') || 'pt',
+    lng: localStorage.getItem('portfolio.language') || 'en',
     fallbackLng: 'en',
     backend: { loadPath: '/locales/{{lng}}/translation.json' },
     interpolation: { escapeValue: false },
