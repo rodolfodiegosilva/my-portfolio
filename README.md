@@ -163,9 +163,3 @@ frontend:
 ## License
 
 MIT © [Rodolfo Silva](https://rodolfo-silva.com)
-
-
-aws amplify update-app \
-  --app-id d1er6cwuop5atf \
-  --profile conta-aws \
-  --environment-variables VITE_GITHUB_USERNAME=rodolfodiegosilva,VITE_GITHUB_TOKEN=ghp_SEU_TOKEN_AQUI
