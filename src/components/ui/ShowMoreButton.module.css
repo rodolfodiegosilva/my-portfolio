@@ -1,0 +1,35 @@
+.wrap { display: flex; justify-content: center; margin-top: 1.25rem; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  background: transparent;
+  border: 1.5px solid rgba(46, 168, 255, 0.35);
+  color: var(--primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.btn:hover {
+  background: rgba(46, 168, 255, 0.09);
+  border-color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.icon { font-size: 0.75rem; transition: transform 0.3s ease; }
+.expanded .icon { transform: rotate(180deg); }
+
+.count {
+  background: rgba(46,168,255,0.12);
+  color: var(--primary);
+  font-size: 0.72rem;
+  padding: 0.05rem 0.45rem;
+  border-radius: 999px;
+  margin-left: 0.2rem;
+}

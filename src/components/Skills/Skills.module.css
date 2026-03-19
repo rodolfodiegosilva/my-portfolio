@@ -1,0 +1,77 @@
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  transition: all var(--transition);
+  min-width: 0;
+  overflow: hidden;
+  position: relative;
+  border-top: 3px solid transparent;
+}
+
+.card:hover {
+  background: var(--surface-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-top-color: var(--primary);
+}
+
+.cardTop { display: flex; align-items: center; gap: 0.75rem; }
+
+.iconWrap {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  background: rgba(46, 168, 255, 0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background var(--transition);
+}
+
+.card:hover .iconWrap { background: rgba(46, 168, 255, 0.18); }
+
+.icon { font-size: 1.5rem; color: var(--primary); }
+
+.info { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+
+.name { font-size: 0.88rem; font-weight: 700; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.levelBadge {
+  display: inline-flex;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+}
+
+.levelAdvanced    { background: rgba(46, 168, 255, 0.12); color: var(--primary); }
+.levelIntermediate{ background: rgba(139, 201, 21, 0.12); color: var(--accent-dark); }
+.levelBeginner    { background: rgba(245, 158, 11, 0.12); color: #f59e0b; }
+
+.desc { font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; flex: 1; }
+
+.barBg { height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+
+.bar { height: 100%; border-radius: 2px; transition: width 0.6s ease; }
+.barAdvanced     { background: linear-gradient(to right, var(--primary), #7dd3fc); }
+.barIntermediate { background: linear-gradient(to right, var(--accent-dark), #d9f99d); }
+.barBeginner     { background: linear-gradient(to right, #f59e0b, #fcd34d); }
+
+@media (max-width: 1100px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 680px)  { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 400px)  { .grid { grid-template-columns: 1fr; } }
+
+@media (max-width: 480px) {
+  .card { padding: 1rem 0.875rem; }
+  .iconWrap { width: 36px; height: 36px; }
+  .icon { font-size: 1.25rem; }
+}
