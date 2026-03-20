@@ -16,7 +16,7 @@
   },
   "profile": {
     "about_title": "Olá, eu sou Rodolfo Silva. Obrigado por visitar meu site.",
-    "about_description": "Desenvolvedor Web experiente em todas as etapas do desenvolvimento web. Conhecimento em interface de usuário, testes e manutenção de sistemas web. Equipado com um conjunto diversificado e promissor de habilidades. Proficiência em várias tecnologias, incluindo Java, SpringBoot, JavaScript, TypeScript, Angular, React, MongoDB e MySQL. Capaz de gerenciar efetivamente projetos independentes e colaborar em equipe.",
+    "about_description": "Desenvolvedor Full Stack com mais de 5 anos de experiência no desenvolvimento de aplicações web de alto desempenho. Proficiente em React, Angular, NestJS, Spring Boot, TypeScript e Java. Experiente com serviços AWS (EC2, S3, Lambda, RDS, CloudFront), Docker, pipelines de CI/CD e metodologia Ágil (Scrum). Apaixonado por arquitetura limpa, APIs escaláveis e entrega de experiências excepcionais ao usuário.",
     "stats": {
       "now": "Atualmente",
       "focus": "Foco",
@@ -647,7 +647,7 @@
   },
   "footer": {
     "about": "Sobre",
-    "about_description": "Diego Seven Sistemas é especializada em desenvolvimento de software, web e mobile, e entrega soluções inovadoras para as necessidades do negócio.",
+    "about_description": "Desenvolvedor Full Stack com mais de 5 anos de experiência criando aplicações web escaláveis. Apaixonado por arquitetura limpa, infraestrutura em nuvem e entrega de ótimas experiências ao usuário.",
     "location": "Localização",
     "location_description": "Manaus, Amazonas, Brasil",
     "links": "Links",
@@ -656,7 +656,7 @@
     "contact": "Contato",
     "social": "Social",
     "rights": "Todos os direitos reservados.",
-    "contact_email": "example@example.com",
+    "contact_email": "rodolfo.diego.gomes@gmail.com",
     "github_link": "https://github.com/rodolfodiegosilva",
     "linkedin_link": "https://www.linkedin.com/in/eng-rodolfo-diego/",
     "twitter_link": "https://x.com/DiegoSeven_mcfc",
@@ -666,7 +666,7 @@
     "title": "Experiências Profissionais",
     "view_details": "Ver Detalhes",
     "download_cv": "Baixar CV",
-    "cv_link": "https://my-portifolio-images.s3.us-east-2.amazonaws.com/CV/Rodolfo_Silva_CV.pdf",
+    "cv_link": "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/profile/Rodolfo_Silva_CV.pdf",
     "experiences": [
       {
         "position": "Desenvolvedor Full Stack",
@@ -779,6 +779,8 @@
         ],
         "stacks": "Angular, JavaScript, Typescript, Laravel, PHP, Composer, MySQL, GitLab e Git Bash"
       }
-    ]
+    ],
+    "close": "Fechar",
+    "stacks": "stacks"
   }
 }

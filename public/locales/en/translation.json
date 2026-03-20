@@ -16,7 +16,7 @@
   },
   "profile": {
     "about_title": "Hi, I'm Rodolfo Silva. Thank you for visiting my site.",
-    "about_description": "Experienced Web Developer adept in all stages of web development. Knowledgeable in user interface, testing, and maintenance of web systems. Equipped with a diverse and promising skill set. Proficient in various technologies, including Java, SpringBoot, JavaScript, TypeScript, Angular, React, MongoDB, and MySQL. Capable of effectively self-managing during independent projects and collaborating in a team.",
+    "about_description": "Full Stack Developer with 5+ years of experience in designing and building high-performance web applications. Proficient in React, Angular, NestJS, Spring Boot, TypeScript, and Java. Experienced with AWS cloud services (EC2, S3, Lambda, RDS, CloudFront), Docker, CI/CD pipelines, and Agile (Scrum) methodology. Passionate about clean architecture, scalable APIs, and delivering outstanding user experiences.",
     "stats": {
       "now": "Now",
       "focus": "Focus",
@@ -648,7 +648,7 @@
   },
   "footer": {
     "about": "About",
-    "about_description": "Diego Seven Sistemas specializes in software, web, and mobile development and delivers innovative solutions for business needs.",
+    "about_description": "Full Stack Developer with 5+ years of experience building scalable web applications. Passionate about clean architecture, cloud infrastructure, and delivering great user experiences.",
     "location": "Location",
     "location_description": "Manaus, Amazonas, Brazil",
     "links": "Links",
@@ -657,7 +657,7 @@
     "contact": "Contact",
     "social": "Social",
     "rights": "All rights reserved.",
-    "contact_email": "example@example.com",
+    "contact_email": "rodolfo.diego.gomes@gmail.com",
     "github_link": "https://github.com/rodolfodiegosilva",
     "linkedin_link": "https://www.linkedin.com/in/eng-rodolfo-diego/",
     "twitter_link": "https://x.com/DiegoSeven_mcfc",
@@ -669,7 +669,7 @@
     "close": "Close",
     "stacks": "stacks",
     "download_cv": "Download CV",
-    "cv_link": "https://my-portifolio-images.s3.us-east-2.amazonaws.com/CV/Rodolfo_Silva_CV.pdf",
+    "cv_link": "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/profile/Rodolfo_Silva_CV.pdf",
     "experiences": [
       {
         "position": "Full Stack Developer",
