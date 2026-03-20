@@ -454,107 +454,8 @@
     },
     "list": [
       {
-        "project": "iot_system_app",
-        "image": "https://my-portifolio-images.s3.us-east-2.amazonaws.com/imgs-iot-system-project/iot_system_app.png",
-        "name": "Aplicação de Sistema IoT",
-        "description": "Este é o frontend para a API do Sistema IoT, construído com Angular. O frontend permite que os usuários interajam com os dispositivos IoT, gerenciem-nos e monitorem seus status.",
-        "technologies": [
-          "Angular",
-          "Spring Boot",
-          "JavaScript",
-          "TypeScript",
-          "Java",
-          "MySQL",
-          "AWS"
-        ],
-        "frontend": "http://github.com/rodolfodiegosilva/iot-system-app",
-        "backend": "http://github.com/rodolfodiegosilva/iot-system-api",
-        "link": "https://iot-system.rodolfo-silva.com",
-        "images": [
-          "https://my-portifolio-images.s3.us-east-2.amazonaws.com/imgs-iot-system-project/device_list_for_new_monitoring_page.png",
-          "https://my-portifolio-images.s3.us-east-2.amazonaws.com/imgs-iot-system-project/device_list_page.png",
-          "https://my-portifolio-images.s3.us-east-2.amazonaws.com/imgs-iot-system-project/jogin_page.png",
-          "https://my-portifolio-images.s3.us-east-2.amazonaws.com/imgs-iot-system-project/monitoring_list_page.png",
-          "https://my-portifolio-images.s3.us-east-2.amazonaws.com/imgs-iot-system-project/new_device_page.png",
-          "https://my-portifolio-images.s3.us-east-2.amazonaws.com/imgs-iot-system-project/new_monitoring_page.png"
-        ],
-        "app_details": {
-          "deployment": "Este projeto é implantado automaticamente usando AWS Amplify. Um pipeline definido no arquivo amplify.yml lida com o processo de implantação contínua. A aplicação está disponível em: https://iot-system.rodolfo-silva.com",
-          "technologies": [
-            "Angular",
-            "JavaScript",
-            "TypeScript",
-            "Bootstrap",
-            "RxJS",
-            "Angular Material",
-            "PrimeNG",
-            "AWS"
-          ],
-          "hosting": {
-            "description": "O frontend é hospedado usando AWS Amplify, fornecendo serviços de implantação contínua e hospedagem.",
-            "url": "https://iot-system.rodolfo-silva.com"
-          },
-          "tests": null,
-          "tests_aux": [
-            {
-              "type": "Testes Unitários",
-              "libraries_tools": [
-                "Jasmine",
-                "Karma"
-              ],
-              "how_to_execute": "Execute `ng test` para executar os testes unitários.",
-              "report_details": "O relatório de testes unitários é gerado por Jasmine e Karma.",
-              "report_link": null,
-              "last": false
-            },
-            {
-              "type": "Testes Automatizados",
-              "libraries_tools": [
-                "Cypress"
-              ],
-              "how_to_execute": "Execute `npx cypress run` para executar os testes automatizados.",
-              "report_details": "O relatório de testes automatizados é gerado por Cypress e está disponível em:",
-              "report_link": "https://iot-system.rodolfo-silva.com/automated-tests",
-              "last": true
-            }
-          ]
-        },
-        "api_details": {
-          "deployment": "A API do Sistema IoT é implantada em uma instância AWS EC2 executando Amazon Linux. O processo de implantação é automatizado usando GitHub Actions.",
-          "technologies": [
-            "Java",
-            "Spring Boot",
-            "Spring Security",
-            "JWT",
-            "Lombok",
-            "JPA",
-            "MySQL",
-            "Swagger",
-            "Gradle",
-            "Docker",
-            "AWS",
-            "Git Actions"
-          ],
-          "hosting": {
-            "description": "A API backend é hospedada em uma instância AWS EC2 executando Amazon Linux, fornecendo um ambiente robusto e escalável para a aplicação.",
-            "url": "https://iot-system.rodolfo-silva-api.com"
-          },
-          "tests": {
-            "type": "Testes Unitários e de Integração",
-            "libraries_tools": [
-              "JUnit",
-              "Mockito",
-              "JaCoCo"
-            ],
-            "how_to_execute": "Execute `./gradlew test` para executar tanto testes unitários quanto de integração.",
-            "report_details": "O relatório é gerado por meio da pipeline de deploy do GitHub Actions, que é copiado diretamente para uma pasta dentro da instância EC2 Linux na AWS.",
-            "report_link": "https://iot-system.rodolfo-silva-api.com/coverage/index.html"
-          }
-        }
-      },
-      {
         "project": "clubinho_nib",
-        "image": "https://my-portifolio-images.s3.us-east-2.amazonaws.com/logo192.png",
+        "image": "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/clubinho_nib/cover/cover.png",
         "name": "Clubinho NIB",
         "description": "Uma plataforma de apoio pedagógico para professores envolvidos em evangelismo infantil, oferecendo recursos e ferramentas para organizar e aprimorar suas atividades.",
         "technologies": [
@@ -570,13 +471,15 @@
         "backend": "https://github.com/rodolfodiegosilva/clubinhosnib-api",
         "link": "https://clubinhonib.com/",
         "images": [
-          "https://my-portifolio-images.s3.us-east-2.amazonaws.com/projeto-clubinho/Screenshot_1.png",
-          "https://my-portifolio-images.s3.us-east-2.amazonaws.com/projeto-clubinho/Screenshot_2.png",
-          "https://my-portifolio-images.s3.us-east-2.amazonaws.com/projeto-clubinho/Screenshot_3.png",
-          "https://my-portifolio-images.s3.us-east-2.amazonaws.com/projeto-clubinho/Screenshot_4.png",
-          "https://my-portifolio-images.s3.us-east-2.amazonaws.com/projeto-clubinho/Screenshot_5.png",
-          "https://my-portifolio-images.s3.us-east-2.amazonaws.com/projeto-clubinho/Screenshot_6.png",
-          "https://my-portifolio-images.s3.us-east-2.amazonaws.com/projeto-clubinho/Screenshot_7.png"
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/clubinho_nib/gallery/screenshot-01-home.png",
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/clubinho_nib/gallery/screenshot-02-feed.png",
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/clubinho_nib/gallery/screenshot-03-sobre.png",
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/clubinho_nib/gallery/screenshot-04-eventos.png",
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/clubinho_nib/gallery/screenshot-05-contato.png",
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/clubinho_nib/gallery/screenshot-06-area-professor.png",
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/clubinho_nib/gallery/screenshot-07-admin.png",
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/clubinho_nib/gallery/screenshot-08-perfis.png",
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/clubinho_nib/gallery/screenshot-09-profile.png"
         ],
         "app_details": {
           "deployment": "Este projeto é automaticamente implantado usando o AWS Amplify com CI/CD integrado ao GitHub. A aplicação está disponível em: https://clubinhonib.com/",
@@ -642,6 +545,91 @@
             ],
             "how_to_execute": "Execute `npm test` para testes com Jest e `./gradlew test` para testes com JUnit.",
             "report_details": "Relatórios de cobertura de testes são gerados durante o processo de CI/CD e podem ser integrados ao pipeline de deploy.",
+            "report_link": null
+          }
+        }
+      },
+      {
+        "project": "orfanato_nib",
+        "image": "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/orfanato_nib/cover/cover.png",
+        "name": "Orfanatos NIB",
+        "description": "Plataforma para o ministério Orfanatos NIB que conecta voluntários e líderes, gerencia visitas a abrigos, compartilha conteúdos e eventos, e oferece área exclusiva do membro com recursos bíblicos.",
+        "technologies": [
+          "React",
+          "NestJS",
+          "TypeScript",
+          "MySQL",
+          "AWS",
+          "MUI Material",
+          "Jest"
+        ],
+        "frontend": "https://github.com/rodolfodiegosilva/orfanatosnib-app",
+        "backend": "https://github.com/rodolfodiegosilva/orfanatosnib-api",
+        "link": "https://orfanatosnib.com/",
+        "images": [
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/orfanato_nib/gallery/screenshot-01-home.png",
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/orfanato_nib/gallery/screenshot-02-feed.png",
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/orfanato_nib/gallery/screenshot-03-sobre.png",
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/orfanato_nib/gallery/screenshot-04-eventos.png",
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/orfanato_nib/gallery/screenshot-05-contato.png",
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/orfanato_nib/gallery/screenshot-06-admin.png",
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/orfanato_nib/gallery/screenshot-07-perfis.png",
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/orfanato_nib/gallery/screenshot-08-dashboard-membro.png"
+        ],
+        "app_details": {
+          "deployment": "O frontend é automaticamente publicado via AWS Amplify com CI/CD integrado ao GitHub. A aplicação está disponível em: https://orfanatosnib.com/",
+          "technologies": [
+            "React",
+            "TypeScript",
+            "MUI Material",
+            "React Router",
+            "Axios",
+            "Redux",
+            "AWS"
+          ],
+          "hosting": {
+            "description": "O frontend está hospedado no AWS Amplify com domínio customizado, com deploy contínuo integrado ao GitHub.",
+            "url": "https://orfanatosnib.com/"
+          },
+          "tests": null,
+          "tests_aux": [
+            {
+              "type": "Testes Unitários",
+              "libraries_tools": [
+                "Jest"
+              ],
+              "how_to_execute": "Execute `npm test` para rodar os testes unitários.",
+              "report_details": "Relatório de testes gerado pelo Jest.",
+              "report_link": null,
+              "last": true
+            }
+          ]
+        },
+        "api_details": {
+          "deployment": "A API backend é publicada em uma instância AWS EC2 usando containers Docker. O GitHub Actions automatiza os builds e deploys para o EC2.",
+          "technologies": [
+            "NestJS",
+            "TypeScript",
+            "MySQL",
+            "TypeORM",
+            "JWT",
+            "Swagger",
+            "Docker",
+            "AWS",
+            "GitHub Actions"
+          ],
+          "hosting": {
+            "description": "A API backend está hospedada no AWS EC2 com Docker, com pipeline CI/CD via GitHub Actions.",
+            "url": "https://orfanatosnib.com/api"
+          },
+          "tests": {
+            "type": "Testes Unitários e de Integração",
+            "libraries_tools": [
+              "Jest",
+              "Supertest"
+            ],
+            "how_to_execute": "Execute `npm test` para rodar todos os testes.",
+            "report_details": "Relatórios de teste gerados pelo Jest durante o pipeline CI/CD.",
             "report_link": null
           }
         }
