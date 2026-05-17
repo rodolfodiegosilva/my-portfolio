@@ -20,9 +20,9 @@ export function ProjectDetails() {
 
   const pd = t('projects.projectDetails', { returnObjects: true }) as Record<string, string>;
   const highlights = [
-    { label: 'Galeria', value: `${project.images.length} telas`, icon: 'fas fa-images' },
-    { label: 'Stack', value: `${project.technologies.length} tecnologias`, icon: 'fas fa-layer-group' },
-    { label: 'Entrega', value: project.link ? 'Projeto online' : 'Código disponível', icon: 'fas fa-rocket' },
+    { label: pd.gallery, value: `${project.images.length} ${pd.screens}`, icon: 'fas fa-images' },
+    { label: 'Stack', value: `${project.technologies.length} ${pd.technologies_count}`, icon: 'fas fa-layer-group' },
+    { label: pd.delivery, value: project.link ? pd.project_online : pd.code_available, icon: 'fas fa-rocket' },
   ];
 
   return (
@@ -34,7 +34,7 @@ export function ProjectDetails() {
 
         <section className={styles.hero}>
           <div className={styles.heroMain}>
-            <div className={styles.kicker}>Case Study</div>
+            <div className={styles.kicker}>{pd.case_study}</div>
             <h1 className={styles.title}>{project.name}</h1>
             <p className={styles.desc}>{project.description}</p>
 
@@ -67,7 +67,7 @@ export function ProjectDetails() {
           </div>
 
           <aside className={styles.summaryCard}>
-            <p className={styles.summaryTitle}>Visão rápida</p>
+            <p className={styles.summaryTitle}>{pd.quick_summary}</p>
             <div className={styles.summaryList}>
               {highlights.map(item => (
                 <div key={item.label} className={styles.summaryItem}>
@@ -85,14 +85,45 @@ export function ProjectDetails() {
         <div className={styles.showcase}>
           <div className={styles.carouselPanel}>
             <div className={styles.panelHeader}>
-              <h2 className={styles.sectionTitle}><i className="fas fa-images" /> Showcase</h2>
-              <span className={styles.panelMeta}>{project.images.length} capturas</span>
+              <h2 className={styles.sectionTitle}><i className="fas fa-images" /> {pd.showcase}</h2>
+              <span className={styles.panelMeta}>{project.images.length} {pd.screenshots}</span>
             </div>
             <div className={styles.carousel}>
-              <Carousel images={project.images} variant="showcase" />
+              <Carousel images={project.images} variant="showcase" thumbsCollapsible />
             </div>
           </div>
         </div>
+
+        {(project.challenge || project.role_summary || project.outcome || project.wins?.length) && (
+          <div className={styles.storyGrid}>
+            {project.challenge && (
+              <div className={styles.storyCard}>
+                <p className={styles.storyTitle}>{pd.challenge}</p>
+                <p className={styles.storyText}>{project.challenge}</p>
+              </div>
+            )}
+            {project.role_summary && (
+              <div className={styles.storyCard}>
+                <p className={styles.storyTitle}>{pd.role}</p>
+                <p className={styles.storyText}>{project.role_summary}</p>
+              </div>
+            )}
+            {project.outcome && (
+              <div className={styles.storyCard}>
+                <p className={styles.storyTitle}>{pd.outcome}</p>
+                <p className={styles.storyText}>{project.outcome}</p>
+              </div>
+            )}
+            {project.wins?.length ? (
+              <div className={styles.storyCard}>
+                <p className={styles.storyTitle}>{pd.wins}</p>
+                <ul className={styles.storyList}>
+                  {project.wins.map(win => <li key={win}>{win}</li>)}
+                </ul>
+              </div>
+            ) : null}
+          </div>
+        )}
 
         <div className={styles.grid}>
           {[
@@ -130,10 +161,10 @@ export function ProjectDetails() {
                   <div className={styles.infoBlock}>
                     <strong className={styles.infoTitle}><i className="fas fa-vial" /> {pd.tests}</strong>
                     <p>{details.tests.type}</p>
-                    <p className={styles.subtle}>Ferramentas: {details.tests.libraries_tools.join(', ')}</p>
+                    <p className={styles.subtle}>{pd.tools}: {details.tests.libraries_tools.join(', ')}</p>
                     <p className={styles.subtle}>{details.tests.report_details}</p>
                     {details.tests.report_link && (
-                      <a href={details.tests.report_link} target="_blank" rel="noopener noreferrer" className={styles.link}>Ver relatório</a>
+                      <a href={details.tests.report_link} target="_blank" rel="noopener noreferrer" className={styles.link}>{pd.view_report}</a>
                     )}
                   </div>
                 )}

@@ -11,17 +11,48 @@
   "personal_data": {
     "name": "Rodolfo Silva",
     "img_profile": "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/profile/profile.png",
-    "profession": "Engenheiro de Software, Desenvolvedor Full-stack e Analista de Sistemas",
-    "description": "Sou movido pela minha paixão por criar designs atraentes e funcionais, desenvolvendo soluções elegantemente simples."
+    "profession": "Engenheiro de Software Full Stack focado em plataformas web de produção, APIs robustas e entrega em cloud",
+    "description": "Construo produtos digitais com frontend escalável, backend confiável e infraestrutura preparada para produção. Meu foco é combinar experiência do usuário, arquitetura limpa e velocidade de entrega sem perder qualidade técnica."
   },
   "profile": {
-    "about_title": "Olá, eu sou Rodolfo Silva. Obrigado por visitar meu site.",
-    "about_description": "Desenvolvedor Full Stack com mais de 5 anos de experiência no desenvolvimento de aplicações web de alto desempenho. Proficiente em React, Angular, NestJS, Spring Boot, TypeScript e Java. Experiente com serviços AWS (EC2, S3, Lambda, RDS, CloudFront), Docker, pipelines de CI/CD e metodologia Ágil (Scrum). Apaixonado por arquitetura limpa, APIs escaláveis e entrega de experiências excepcionais ao usuário.",
+    "about_title": "Projetando e entregando produtos web com visão de engenharia, negócio e experiência.",
+    "about_description": "Atuo como Full Stack Engineer com mais de 5 anos construindo aplicações web de produção para produtos B2C, painéis administrativos, APIs e fluxos operacionais. Trabalho com React, Angular, NestJS, Spring Boot, TypeScript, Java e AWS, sempre com foco em arquitetura sustentável, deploy contínuo, observabilidade e experiência consistente para o usuário final.",
+    "recent_wins": "Destaques recentes",
     "stats": {
       "now": "Atualmente",
       "focus": "Foco",
-      "focus_value": "UI limpa • APIs escaláveis • Cloud"
-    }
+      "focus_value": "UI limpa • APIs escaláveis • Cloud",
+      "experience": "Experiência",
+      "experience_value": "5+ anos construindo aplicações full stack"
+    },
+    "pillars": [
+      {
+        "title": "Arquitetura aplicada",
+        "description": "Estruturo frontend, backend e integrações pensando em manutenção, escala e clareza operacional.",
+        "icon": "fas fa-diagram-project"
+      },
+      {
+        "title": "Entrega em produção",
+        "description": "Trabalho com deploy contínuo, ambientes reais, cloud e automação para acelerar releases com segurança.",
+        "icon": "fas fa-cloud-arrow-up"
+      },
+      {
+        "title": "Produto + experiência",
+        "description": "Traduzo requisitos de negócio em fluxos claros, interfaces funcionais e experiências consistentes.",
+        "icon": "fas fa-object-group"
+      },
+      {
+        "title": "Stack ampla",
+        "description": "Atuo de ponta a ponta com React, Angular, NestJS, Spring Boot, Docker, AWS e bancos SQL/NoSQL.",
+        "icon": "fas fa-layer-group"
+      }
+    ],
+    "wins": [
+      "Plataformas publicadas com domínio próprio, CI/CD e infraestrutura em cloud.",
+      "Experiência prática com produtos web, APIs, painéis administrativos e fluxos operacionais.",
+      "Atuação em projetos enterprise e B2C com foco em desempenho, escalabilidade e qualidade de código.",
+      "Construção de arquiteturas web + API + worker para cenários com processamento assíncrono."
+    ]
   },
   "skills": {
     "title": "Habilidades",
@@ -448,16 +479,42 @@
       "frontend": "Frontend",
       "backend": "Backend",
       "technologies": "Tecnologias",
+      "technologies_count": "tecnologias",
       "cicd": "CI/CD",
       "hosting": "Hospedagem",
-      "tests": "Testes"
+      "tests": "Testes",
+      "case_study": "Estudo de Caso",
+      "quick_summary": "Visão rápida",
+      "gallery": "Galeria",
+      "delivery": "Entrega",
+      "project_online": "Projeto online",
+      "code_available": "Código disponível",
+      "showcase": "Showcase",
+      "screens": "telas",
+      "screenshots": "capturas",
+      "tools": "Ferramentas",
+      "view_report": "Ver relatório",
+      "challenge": "Desafio",
+      "role": "Meu papel",
+      "outcome": "Resultado",
+      "wins": "Principais entregas"
     },
     "list": [
       {
         "project": "clubinho_nib",
         "image": "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/clubinho_nib/cover/cover.png",
         "name": "Clubinho NIB",
-        "description": "Plataforma web para apoiar o evangelismo infantil com trilhas de conteúdo, feed de publicações, área do professor e gestão administrativa. O foco foi unir experiência acolhedora, organização pedagógica e operação simples para líderes e professores.",
+        "description": "Plataforma web para o ministério infantil da Nova Igreja Batista, conectando área do professor, gestão de clubes, relatórios de pagela, materiais semanais, meditações, informativos, documentos e publicações em um fluxo único para líderes, coordenadores e professores.",
+        "challenge": "Centralizar a rotina pedagógica e operacional do ministério em um único produto, cobrindo turmas, frequência, materiais, comunicação e conteúdo institucional sem perder simplicidade no uso diário. A arquitetura também precisava sustentar publicação contínua, observabilidade com CloudWatch e evolução para integrações via API Gateway, Lambda e banco relacional gerenciado.",
+        "role_summary": "Atuação full stack na experiência React, na API NestJS e na estrutura de publicação, implementando módulos de clubes, usuários, professores, conteúdos, upload de imagens, área do professor, pagelas semanais e painéis administrativos.",
+        "outcome": "Entrega de uma plataforma publicada com área pública, área do professor e backoffice administrativo, apoiando planejamento de aulas, acompanhamento de presença, compartilhamento de fotos e organização contínua da operação do ministério.",
+        "wins": [
+          "Área do professor com envio de pagelas, acesso a materiais da semana e upload de fotos das atividades.",
+          "Módulos administrativos para clubes, coordenadores, professores, usuários e perfis com permissões distintas.",
+          "Distribuição centralizada de meditações, informativos, documentos e conteúdos pedagógicos no próprio sistema.",
+          "Aplicação publicada com frontend React, backend NestJS e fluxo de entrega apoiado por serviços AWS.",
+          "Base preparada para monitoramento operacional com CloudWatch e evolução de integrações com API Gateway, Lambda e RDS."
+        ],
         "technologies": [
           "React",
           "NestJS",
@@ -521,7 +578,7 @@
           ]
         },
         "api_details": {
-          "deployment": "A API do backend é implantada em uma instância AWS EC2 usando containers Docker. O pipeline de CI/CD com GitHub Actions envia imagens para o Docker Hub, que são automaticamente puxadas e implantadas na EC2. Além disso, o AWS Lambda é integrado para tarefas serverless específicas.",
+          "deployment": "A API do backend é implantada em uma instância AWS EC2 usando containers Docker. O pipeline de CI/CD com GitHub Actions envia imagens para o Docker Hub, que são automaticamente puxadas e implantadas na EC2. A arquitetura também integra AWS Lambda para tarefas serverless específicas, API Gateway para exposição segura de rotas e RDS como banco relacional gerenciado.",
           "technologies": [
             "NestJS",
             "MySQL",
@@ -533,7 +590,7 @@
             "GitHub Actions"
           ],
           "hosting": {
-            "description": "A API do backend é hospedada na AWS EC2 com Docker, utilizando pipeline de CI/CD do GitHub Actions e imagens armazenadas no Docker Hub. O AWS Lambda é usado para recursos adicionais serverless.",
+            "description": "A API do backend é hospedada na AWS EC2 com Docker, utilizando pipeline de CI/CD do GitHub Actions e imagens armazenadas no Docker Hub. O AWS Lambda é usado para recursos adicionais serverless, o API Gateway atua como camada de entrada e o CloudWatch apoia logs, métricas e acompanhamento operacional.",
             "url": "https://clubinhonib.com/api"
           },
           "tests": {
@@ -553,7 +610,17 @@
         "project": "orfanato_nib",
         "image": "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/orfanato_nib/cover/cover.png",
         "name": "Orfanatos NIB",
-        "description": "Ecossistema digital para o ministério Orfanatos NIB, conectando voluntários, líderes e frentes de ação em uma única experiência. Reúne comunicação, agenda de visitas, área do membro e gestão de conteúdo para ampliar o alcance do projeto social.",
+        "description": "Ecossistema digital para o ministério Orfanatos NIB, reunindo páginas públicas, gestão de abrigos e acolhidos, perfis de líderes e membros, materiais de visita, galerias, eventos, meditações, comentários, feedbacks e fluxos de pagela para apoiar a operação social do projeto.",
+        "challenge": "Conectar conteúdo institucional, gestão interna, organização das visitas e acompanhamento de membros em uma única plataforma, sem fragmentar a experiência entre voluntários, líderes e administradores. O produto também precisava nascer pronto para operar com banco relacional gerenciado, rotinas auxiliares em Lambda, exposição organizada por API Gateway e observabilidade centralizada em CloudWatch.",
+        "role_summary": "Construção da aplicação web, da API e da base técnica de publicação, integrando módulos de shelters, sheltered, leader profiles, member profiles, visit materials, pagelas, comentários, feedbacks, banners e conteúdos públicos.",
+        "outcome": "Entrega de uma plataforma centralizada para o ministério com gestão de conteúdo, membros, visitas, materiais e ações sociais em produção, apoiando tanto a vitrine pública quanto os fluxos internos de operação da equipe.",
+        "wins": [
+          "Gestão completa de shelters, acolhidos, líderes, membros e acompanhamento das visitas do ministério.",
+          "Materiais de visita, eventos, vídeos, ideias, galerias e meditações administrados na mesma base.",
+          "Fluxos de pagela para presença, acompanhamento e pendências operacionais das equipes.",
+          "Backend NestJS com publicação em infraestrutura AWS e integrações como S3, SES e Twilio previstas no ecossistema.",
+          "Base preparada para monitoramento com CloudWatch e evolução de rotinas complementares com API Gateway, Lambda e RDS."
+        ],
         "technologies": [
           "React",
           "NestJS",
@@ -606,7 +673,7 @@
           ]
         },
         "api_details": {
-          "deployment": "A API backend é publicada em uma instância AWS EC2 usando containers Docker. O GitHub Actions automatiza os builds e deploys para o EC2.",
+          "deployment": "A API backend é publicada em uma instância AWS EC2 usando containers Docker. O GitHub Actions automatiza os builds e deploys para o EC2, enquanto a arquitetura considera RDS para persistência gerenciada, API Gateway como camada de entrada e Lambda para rotinas complementares.",
           "technologies": [
             "NestJS",
             "TypeScript",
@@ -619,7 +686,7 @@
             "GitHub Actions"
           ],
           "hosting": {
-            "description": "A API backend está hospedada no AWS EC2 com Docker, com pipeline CI/CD via GitHub Actions.",
+            "description": "A API backend está hospedada no AWS EC2 com Docker, com pipeline CI/CD via GitHub Actions, banco relacional em RDS, monitoramento com CloudWatch e serviços auxiliares em Lambda quando necessário.",
             "url": "https://orfanatosnib.com/api"
           },
           "tests": {
@@ -636,9 +703,19 @@
       },
       {
         "project": "voto_insight",
-        "image": "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/voto_insight/cover/cover.png",
+        "image": "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/voto_insight/gallery/screenshot-00-presentation.png",
         "name": "Voto Insight",
-        "description": "Plataforma de inteligência eleitoral construída em monorepo para consolidar dados, análise operacional e acompanhamento de campanhas. O projeto integra PWA moderna, API robusta e worker dedicado para filas e processamento assíncrono.",
+        "description": "Plataforma de inteligência eleitoral em monorepo, reunindo PWA Angular, API NestJS, worker Python, favoritos, relatórios, planos, consultas por candidato e localidade, além de registro e importação de pesquisas para apoiar operação e acompanhamento de campanhas.",
+        "challenge": "Estruturar um produto eleitoral capaz de combinar consultas rápidas, análise operacional, registro de pesquisas e processamento assíncrono sem perder consistência de dados. A solução precisava nascer preparada para filas, observabilidade e crescimento futuro com API Gateway, Lambda, CloudWatch e persistência relacional gerenciada.",
+        "role_summary": "Atuação na construção e evolução da experiência web, integração com API e organização técnica do monorepo, cobrindo dashboard, consultas eleitorais, relatórios, favoritos, registro de pesquisas e separação de responsabilidades entre web, API, worker e admin.",
+        "outcome": "Entrega de uma plataforma com frontend PWA, API dedicada, worker assíncrono e base administrativa para relatórios, cadastros e importações, pronta para evoluir em cenários de operação, análise e processamento de dados eleitorais.",
+        "wins": [
+          "Monorepo com Angular PWA, NestJS, PostgreSQL, Redis, BullMQ e worker Python para processamento assíncrono.",
+          "Módulos para consultas eleitorais, favoritos, planos, relatórios, administração e acompanhamento operacional.",
+          "Registro e importação de pesquisas eleitorais com filas, jobs e separação clara entre API e worker.",
+          "Organização por apps e shared-types para evolução independente entre web, API, worker e admin.",
+          "Base pronta para crescer com observabilidade centralizada e integrações futuras usando API Gateway, Lambda, CloudWatch e RDS."
+        ],
         "technologies": [
           "Angular",
           "NestJS",
@@ -652,6 +729,7 @@
         "backend": "https://github.com/LucianoAjs/voto-insight/tree/main/apps/api",
         "link": "https://votoinsight.com/",
         "images": [
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/voto_insight/gallery/screenshot-00-presentation.png",
           "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/voto_insight/gallery/screenshot-01-overview.png",
           "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/voto_insight/gallery/screenshot-02-dashboard.png",
           "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/voto_insight/gallery/screenshot-03-analysis.png",

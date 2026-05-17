@@ -188,6 +188,50 @@ html[data-theme='dark'] .summaryItem {
   margin-bottom: 1.75rem;
 }
 
+.storyGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.storyCard {
+  padding: 1.2rem;
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(255,255,255,0.7);
+}
+
+html[data-theme='dark'] .storyCard {
+  border-color: rgba(132, 168, 200, 0.12);
+  background: rgba(255,255,255,0.03);
+}
+
+.storyTitle {
+  color: var(--text);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+  margin-bottom: 0.55rem;
+}
+
+.storyText {
+  color: var(--text-muted);
+  line-height: 1.8;
+  font-size: 0.9rem;
+}
+
+.storyList {
+  padding-left: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
 .carouselPanel {
   padding: 1.4rem;
 }
@@ -365,6 +409,10 @@ html[data-theme='dark'] .infoBlock {
 
 @media (max-width: 900px) {
   .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .storyGrid {
     grid-template-columns: 1fr;
   }
 }

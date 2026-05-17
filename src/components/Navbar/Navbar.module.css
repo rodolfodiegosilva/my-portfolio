@@ -76,7 +76,7 @@
 
 .navLink i { font-size: 0.75rem; opacity: 0.7; }
 
-.navLink:hover, .navLink.active {
+.navLink:hover, .active {
   color: var(--primary);
   background: rgba(46,168,255,0.10);
 }

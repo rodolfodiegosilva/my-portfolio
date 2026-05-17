@@ -24,6 +24,11 @@ export interface Project {
   image: string;
   name: string;
   description: string;
+  featured?: boolean;
+  challenge?: string;
+  role_summary?: string;
+  outcome?: string;
+  wins?: string[];
   technologies: string[];
   frontend: string;
   backend: string;

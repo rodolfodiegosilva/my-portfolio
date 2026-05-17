@@ -94,6 +94,7 @@ main { padding-top: var(--nav-height); }
 }
 
 section { padding: 5rem 0; }
+section[id] { scroll-margin-top: calc(var(--nav-height) + 18px); }
 
 /* Seções alternadas para separação visual */
 section:nth-child(even) { background: var(--bg-alt); }
@@ -228,6 +229,12 @@ section:nth-child(even) { background: var(--bg-alt); }
 
 /* ===== Selection ===== */
 ::selection { background: rgba(46, 168, 255, 0.2); color: var(--text); }
+
+/* ===== Focus ===== */
+:focus-visible {
+  outline: 3px solid rgba(46, 168, 255, 0.55);
+  outline-offset: 3px;
+}
 
 /* ===== Responsivo ===== */
 @media (max-width: 768px) {

@@ -1,3 +1,21 @@
+.shell {
+  padding: 2rem;
+  border-radius: 28px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background:
+    radial-gradient(circle at top left, rgba(46,168,255,0.10), transparent 24%),
+    linear-gradient(180deg, rgba(255,255,255,0.96), rgba(244,248,255,0.92));
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+}
+
+html[data-theme='dark'] .shell {
+  border-color: rgba(132, 168, 200, 0.14);
+  background:
+    radial-gradient(circle at top left, rgba(46,168,255,0.14), transparent 24%),
+    linear-gradient(180deg, rgba(34,48,64,0.98), rgba(28,40,56,0.96));
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+}
+
 .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
 
 .card {
@@ -71,6 +89,7 @@
 @media (max-width: 400px)  { .grid { grid-template-columns: 1fr; } }
 
 @media (max-width: 480px) {
+  .shell { padding: 1rem; border-radius: 18px; }
   .card { padding: 1rem 0.875rem; }
   .iconWrap { width: 36px; height: 36px; }
   .icon { font-size: 1.25rem; }

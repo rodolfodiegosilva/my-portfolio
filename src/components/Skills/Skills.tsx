@@ -36,6 +36,7 @@ export function Skills() {
   return (
     <section id="skills">
       <div className="container">
+        <div className={styles.shell}>
         <h2 className="section-title"><i className="fas fa-code" />{t('skills.title')}</h2>
         <div className={styles.grid}>
           {visible.map((skill) => {
@@ -67,6 +68,7 @@ export function Skills() {
         {isMobile && skills.length > VISIBLE_MOBILE && (
           <ShowMoreButton expanded={expanded} onToggle={() => setExpanded(v => !v)} totalCount={skills.length} visibleCount={VISIBLE_MOBILE} />
         )}
+        </div>
       </div>
     </section>
   );

@@ -25,6 +25,7 @@ export function Education() {
   return (
     <section id="education">
       <div className="container">
+        <div className={styles.shell}>
         <h2 className="section-title"><i className="fas fa-graduation-cap" />{t('education.title')}</h2>
         <div className={styles.layout}>
           <div className={styles.degrees}>
@@ -67,6 +68,7 @@ export function Education() {
               <ShowMoreButton expanded={expanded} onToggle={() => setExpanded(v => !v)} totalCount={certifications.technologies?.length || 0} visibleCount={VISIBLE_CERTS} />
             )}
           </div>
+        </div>
         </div>
       </div>
 

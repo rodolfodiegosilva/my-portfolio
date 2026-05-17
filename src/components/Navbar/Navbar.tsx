@@ -21,6 +21,7 @@ export function Navbar() {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>('');
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -29,6 +30,38 @@ export function Navbar() {
   }, []);
 
   useEffect(() => { setMenuOpen(false); }, [location.pathname]);
+
+  useEffect(() => {
+    if (location.pathname !== '/') {
+      setActiveSection('');
+      return;
+    }
+
+    const sections = SECTIONS
+      .map(section => document.getElementById(section.id))
+      .filter(Boolean) as HTMLElement[];
+
+    if (!sections.length) return;
+
+    const observer = new IntersectionObserver(
+      entries => {
+        const visible = entries
+          .filter(entry => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visible?.target?.id) {
+          setActiveSection(visible.target.id);
+        }
+      },
+      {
+        rootMargin: '-25% 0px -50% 0px',
+        threshold: [0.2, 0.35, 0.5, 0.7],
+      }
+    );
+
+    sections.forEach(section => observer.observe(section));
+    return () => observer.disconnect();
+  }, [location.pathname]);
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -55,7 +88,11 @@ export function Navbar() {
 
   const navItems = SECTIONS.map(s => (
     <li key={s.id}>
-      <button className={styles.navLink} onClick={() => scrollToSection(s.id)}>
+      <button
+        className={`${styles.navLink} ${activeSection === s.id ? styles.active : ''}`}
+        onClick={() => scrollToSection(s.id)}
+        aria-current={activeSection === s.id ? 'page' : undefined}
+      >
         <i className={s.icon} />
         {t(s.key)}
       </button>

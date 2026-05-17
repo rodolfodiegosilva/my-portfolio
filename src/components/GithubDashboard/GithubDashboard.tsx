@@ -20,6 +20,7 @@ export function GithubDashboard() {
   return (
     <section id="github-dashboard">
       <div className="container">
+        <div className={styles.shell}>
         <h2 className="section-title"><i className="fab fa-github" />{t('github_dashboard.title')}</h2>
 
         <div className={styles.chartWrap}>
@@ -77,6 +78,7 @@ export function GithubDashboard() {
             )}
           </div>
         )}
+        </div>
       </div>
     </section>
   );
