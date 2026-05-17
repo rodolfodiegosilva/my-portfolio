@@ -1,4 +1,4 @@
-const CACHE_NAME = 'rs-portfolio-v1';
+const CACHE_NAME = 'rs-portfolio-v2';
 
 const PRECACHE_ASSETS = [
   '/',

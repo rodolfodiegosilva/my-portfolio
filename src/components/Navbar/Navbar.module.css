@@ -12,9 +12,10 @@
 }
 
 .inner {
-  max-width: var(--container);
+  width: 95vw;
+  max-width: none;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0;
   height: 100%;
   display: flex;
   align-items: center;
@@ -47,7 +48,13 @@
 }
 
 /* ===== Desktop nav ===== */
-.desktopNav { display: flex; align-items: center; gap: 0.2rem; list-style: none; }
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  list-style: none;
+  margin-left: auto;
+}
 
 .navLink {
   display: flex;
@@ -155,5 +162,9 @@
 }
 
 @media (max-width: 480px) {
-  .inner { padding: 0 1rem; }
+  .inner { width: 98vw; }
+}
+
+@media (max-width: 768px) {
+  .inner { width: 98vw; }
 }

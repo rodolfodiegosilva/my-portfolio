@@ -85,6 +85,39 @@
 .modalTechPills { display: flex; gap: 0.4rem; flex-wrap: wrap; }
 .modalTechPill { background: rgba(46,168,255,0.10); color: var(--primary); border: 1px solid rgba(46,168,255,0.18); padding: 0.2rem 0.6rem; border-radius: 999px; font-size: 0.72rem; font-weight: 600; }
 
+@media (min-width: 1440px) {
+  .list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .timeline {
+    padding-left: 0;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .card::before {
+    left: 1.1rem;
+    top: 1.1rem;
+    transform: none;
+    width: 8px;
+    height: 8px;
+    border-width: 0;
+  }
+
+  .card {
+    padding-top: 1.65rem;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+  }
+}
+
 @media (max-width: 480px) {
   .timeline { padding-left: 1rem; }
   .card { padding: 1rem; }

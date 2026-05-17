@@ -457,7 +457,7 @@
         "project": "clubinho_nib",
         "image": "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/clubinho_nib/cover/cover.png",
         "name": "Clubinho NIB",
-        "description": "Uma plataforma de apoio pedagógico para professores envolvidos em evangelismo infantil, oferecendo recursos e ferramentas para organizar e aprimorar suas atividades.",
+        "description": "Plataforma web para apoiar o evangelismo infantil com trilhas de conteúdo, feed de publicações, área do professor e gestão administrativa. O foco foi unir experiência acolhedora, organização pedagógica e operação simples para líderes e professores.",
         "technologies": [
           "React",
           "NestJS",
@@ -553,7 +553,7 @@
         "project": "orfanato_nib",
         "image": "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/orfanato_nib/cover/cover.png",
         "name": "Orfanatos NIB",
-        "description": "Plataforma para o ministério Orfanatos NIB que conecta voluntários e líderes, gerencia visitas a abrigos, compartilha conteúdos e eventos, e oferece área exclusiva do membro com recursos bíblicos.",
+        "description": "Ecossistema digital para o ministério Orfanatos NIB, conectando voluntários, líderes e frentes de ação em uma única experiência. Reúne comunicação, agenda de visitas, área do membro e gestão de conteúdo para ampliar o alcance do projeto social.",
         "technologies": [
           "React",
           "NestJS",
@@ -630,6 +630,75 @@
             ],
             "how_to_execute": "Execute `npm test` para rodar todos os testes.",
             "report_details": "Relatórios de teste gerados pelo Jest durante o pipeline CI/CD.",
+            "report_link": null
+          }
+        }
+      },
+      {
+        "project": "voto_insight",
+        "image": "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/voto_insight/cover/cover.png",
+        "name": "Voto Insight",
+        "description": "Plataforma de inteligência eleitoral construída em monorepo para consolidar dados, análise operacional e acompanhamento de campanhas. O projeto integra PWA moderna, API robusta e worker dedicado para filas e processamento assíncrono.",
+        "technologies": [
+          "Angular",
+          "NestJS",
+          "TypeScript",
+          "PostgreSQL",
+          "Redis",
+          "Python",
+          "Docker"
+        ],
+        "frontend": "https://github.com/LucianoAjs/voto-insight/tree/main/apps/web",
+        "backend": "https://github.com/LucianoAjs/voto-insight/tree/main/apps/api",
+        "link": "https://votoinsight.com/",
+        "images": [
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/voto_insight/gallery/screenshot-01-overview.png",
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/voto_insight/gallery/screenshot-02-dashboard.png",
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/voto_insight/gallery/screenshot-03-analysis.png",
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/voto_insight/gallery/screenshot-04-tracking.png",
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/voto_insight/gallery/screenshot-05-insights.png",
+          "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/projects/voto_insight/gallery/screenshot-06-mobile.png"
+        ],
+        "app_details": {
+          "deployment": "O frontend foi estruturado como PWA em Angular 21 e preparado para publicação em produção com foco em consulta rápida, navegação responsiva e experiência de produto para acompanhamento eleitoral. A aplicação principal está disponível em: https://votoinsight.com/",
+          "technologies": [
+            "Angular",
+            "TypeScript",
+            "SCSS",
+            "PWA",
+            "Signals",
+            "Cloudflare"
+          ],
+          "hosting": {
+            "description": "Aplicação web publicada em domínio próprio, com arquitetura moderna de PWA e assets otimizados para navegação responsiva em desktop e mobile.",
+            "url": "https://votoinsight.com/"
+          },
+          "tests": null
+        },
+        "api_details": {
+          "deployment": "A arquitetura backend usa NestJS 11 com Prisma 7, PostgreSQL 17 e Redis 7, além de um worker em Python 3.13 para tarefas assíncronas e pipelines de processamento. A API de produção atende em: https://api.votoinsight.com",
+          "technologies": [
+            "NestJS",
+            "TypeScript",
+            "Prisma",
+            "PostgreSQL",
+            "Redis",
+            "Python",
+            "Docker"
+          ],
+          "hosting": {
+            "description": "API publicada em domínio próprio, com stack preparada para banco, cache e workers assíncronos, além de ambiente local padronizado via Docker Compose.",
+            "url": "https://api.votoinsight.com"
+          },
+          "tests": {
+            "type": "Testes de API e validação da stack integrada",
+            "libraries_tools": [
+              "NestJS",
+              "Prisma",
+              "Docker Compose"
+            ],
+            "how_to_execute": "Execute `npm run api:dev`, `npm run web:dev` e `npm run compose:up` conforme o contexto de validação local.",
+            "report_details": "A estrutura do repositório separa frontend, API e worker para permitir evolução independente e validação integrada da plataforma.",
             "report_link": null
           }
         }

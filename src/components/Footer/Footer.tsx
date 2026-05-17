@@ -35,6 +35,7 @@ export function Footer() {
       <div className={styles.accent} />
 
       <div className="container">
+        <div className={styles.shell}>
         <div className={styles.main}>
 
           {/* Brand */}
@@ -120,6 +121,7 @@ export function Footer() {
           <p className={styles.credit}>
             Made with <i className="fas fa-heart" /> in Manaus, Brazil
           </p>
+        </div>
         </div>
       </div>
     </footer>

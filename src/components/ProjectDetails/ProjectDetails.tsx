@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useProjectByName } from '../../hooks/useProjects';
 import { Carousel } from '../ui/Carousel';
+import { TechIcon } from '../../utils/techIcons';
 import styles from './ProjectDetails.module.css';
 
 export function ProjectDetails() {
@@ -18,6 +19,11 @@ export function ProjectDetails() {
   );
 
   const pd = t('projects.projectDetails', { returnObjects: true }) as Record<string, string>;
+  const highlights = [
+    { label: 'Galeria', value: `${project.images.length} telas`, icon: 'fas fa-images' },
+    { label: 'Stack', value: `${project.technologies.length} tecnologias`, icon: 'fas fa-layer-group' },
+    { label: 'Entrega', value: project.link ? 'Projeto online' : 'Código disponível', icon: 'fas fa-rocket' },
+  ];
 
   return (
     <div className={styles.page}>
@@ -26,22 +32,65 @@ export function ProjectDetails() {
           <i className="fas fa-arrow-left" /> Voltar
         </button>
 
-        <h1 className={styles.title}>{project.name}</h1>
-        <p className={styles.desc}>{project.description}</p>
+        <section className={styles.hero}>
+          <div className={styles.heroMain}>
+            <div className={styles.kicker}>Case Study</div>
+            <h1 className={styles.title}>{project.name}</h1>
+            <p className={styles.desc}>{project.description}</p>
 
-        <div className={styles.carousel}>
-          <Carousel images={project.images} />
-        </div>
+            <div className={styles.heroActions}>
+              {project.link && (
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn-primary">
+                  <i className="fas fa-external-link-alt" /> Abrir projeto
+                </a>
+              )}
+              {project.frontend && (
+                <a href={project.frontend} target="_blank" rel="noopener noreferrer" className="btn-outline">
+                  <i className="fab fa-github" /> Frontend
+                </a>
+              )}
+              {project.backend && (
+                <a href={project.backend} target="_blank" rel="noopener noreferrer" className="btn-outline">
+                  <i className="fab fa-github" /> Backend
+                </a>
+              )}
+            </div>
 
-        <div className={styles.techSection}>
-          <h2 className={styles.sectionTitle}><i className="fas fa-tags" /> {pd.technologies}</h2>
-          <div className={styles.techPills}>
-            {project.technologies.map(tech => (
-              <span key={tech} className={styles.techPill}>
-                <img src={`/icons/${tech.toLowerCase().replace(/\s/g, '-')}.svg`} alt={tech} className={styles.techIcon} onError={e => (e.currentTarget.style.display = 'none')} />
-                {tech}
-              </span>
-            ))}
+            <div className={styles.techPills}>
+              {project.technologies.map(tech => (
+                <span key={tech} className={styles.techPill}>
+                  <TechIcon name={tech} className={styles.techIcon} size={14} />
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <aside className={styles.summaryCard}>
+            <p className={styles.summaryTitle}>Visão rápida</p>
+            <div className={styles.summaryList}>
+              {highlights.map(item => (
+                <div key={item.label} className={styles.summaryItem}>
+                  <span className={styles.summaryIcon}><i className={item.icon} /></span>
+                  <div>
+                    <p className={styles.summaryLabel}>{item.label}</p>
+                    <p className={styles.summaryValue}>{item.value}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </aside>
+        </section>
+
+        <div className={styles.showcase}>
+          <div className={styles.carouselPanel}>
+            <div className={styles.panelHeader}>
+              <h2 className={styles.sectionTitle}><i className="fas fa-images" /> Showcase</h2>
+              <span className={styles.panelMeta}>{project.images.length} capturas</span>
+            </div>
+            <div className={styles.carousel}>
+              <Carousel images={project.images} variant="showcase" />
+            </div>
           </div>
         </div>
 
@@ -54,27 +103,55 @@ export function ProjectDetails() {
             if (!details) return null;
             return (
               <div key={key} className={styles.detailCard}>
-                <h3 className={styles.detailTitle}><i className={icon} /> {label}</h3>
-                <p className={styles.deployment}>{details.deployment}</p>
-                <div className={styles.techPills}>
-                  {details.technologies.map(t => <span key={t} className="badge">{t}</span>)}
+                <div className={styles.detailHead}>
+                  <h3 className={styles.detailTitle}><i className={icon} /> {label}</h3>
+                  <span className={styles.detailBadge}>{details.technologies.length} itens</span>
                 </div>
+                <p className={styles.deployment}>{details.deployment}</p>
+
+                <div className={styles.infoBlock}>
+                  <p className={styles.blockTitle}>{pd.technologies}</p>
+                  <div className={styles.detailPills}>
+                    {details.technologies.map(t => <span key={t} className="badge">{t}</span>)}
+                  </div>
+                </div>
+
                 {details.hosting && (
-                  <div className={styles.hosting}>
-                    <strong><i className="fas fa-cloud" /> {pd.hosting}:</strong>
+                  <div className={styles.infoBlock}>
+                    <strong className={styles.infoTitle}><i className="fas fa-cloud" /> {pd.hosting}</strong>
                     <p>{details.hosting.description}</p>
-                    <a href={details.hosting.url} target="_blank" rel="noopener noreferrer" className={styles.link}>{details.hosting.url}</a>
+                    <a href={details.hosting.url} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                      {details.hosting.url}
+                    </a>
                   </div>
                 )}
+
                 {details.tests && (
-                  <div className={styles.tests}>
-                    <strong><i className="fas fa-vial" /> {pd.tests}:</strong>
-                    <p>{details.tests.type} — {details.tests.libraries_tools.join(', ')}</p>
+                  <div className={styles.infoBlock}>
+                    <strong className={styles.infoTitle}><i className="fas fa-vial" /> {pd.tests}</strong>
+                    <p>{details.tests.type}</p>
+                    <p className={styles.subtle}>Ferramentas: {details.tests.libraries_tools.join(', ')}</p>
+                    <p className={styles.subtle}>{details.tests.report_details}</p>
                     {details.tests.report_link && (
                       <a href={details.tests.report_link} target="_blank" rel="noopener noreferrer" className={styles.link}>Ver relatório</a>
                     )}
                   </div>
                 )}
+
+                {details.tests_aux?.length ? (
+                  <div className={styles.infoBlock}>
+                    <strong className={styles.infoTitle}><i className="fas fa-flask" /> {pd.tests}</strong>
+                    <div className={styles.testList}>
+                      {details.tests_aux.map(test => (
+                        <div key={`${label}-${test.type}`} className={styles.testCard}>
+                          <p className={styles.testType}>{test.type}</p>
+                          <p className={styles.subtle}>{test.libraries_tools.join(', ')}</p>
+                          <p className={styles.subtle}>{test.report_details}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
               </div>
             );
           })}

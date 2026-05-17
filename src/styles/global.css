@@ -86,9 +86,10 @@ html[data-theme='dark'] body::before {
 main { padding-top: var(--nav-height); }
 
 .container {
-  max-width: var(--container);
+  width: 95vw;
+  max-width: none;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0;
   min-width: 0;
 }
 
@@ -232,12 +233,12 @@ section:nth-child(even) { background: var(--bg-alt); }
 @media (max-width: 768px) {
   :root { --radius: 13px; --radius-sm: 8px; --nav-height: 62px; }
   section { padding: 3.5rem 0; }
-  .container { padding: 0 1rem; }
+  .container { width: 98vw; }
   .section-title i { width: 30px; height: 30px; font-size: 0.75rem; }
 }
 
 @media (max-width: 480px) {
   section { padding: 2.5rem 0; }
   .section-title { font-size: 1.25rem; }
-  .container { padding: 0 0.875rem; }
+  .container { width: 98vw; }
 }

@@ -1,15 +1,25 @@
 .carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.viewport {
   position: relative;
-  border-radius: var(--radius);
+  border-radius: 24px;
   overflow: hidden;
-  background: var(--surface);
-  aspect-ratio: 16/9;
+  background:
+    radial-gradient(circle at top left, rgba(46, 168, 255, 0.10), transparent 30%),
+    linear-gradient(180deg, rgba(10, 15, 30, 0.04), rgba(10, 15, 30, 0.08));
+  border: 1px solid var(--border);
+  aspect-ratio: 16 / 9;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.10);
 }
 
 .track {
   display: flex;
   height: 100%;
-  transition: transform 0.35s ease;
+  transition: transform 0.45s ease;
 }
 
 .slide {
@@ -17,56 +27,156 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  background: var(--surface);
 }
+
+.showcase .slide {
+  object-fit: contain;
+  padding: 1rem;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.96), rgba(248,251,255,0.92));
+}
+
+html[data-theme='dark'] .showcase .slide {
+  background:
+    linear-gradient(180deg, rgba(28,42,58,0.96), rgba(34,48,64,0.94));
+}
+
+.counter {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(7, 16, 27, 0.72);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  font-size: 0.78rem;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.counterDivider { opacity: 0.6; }
 
 .arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.45);
-  border: none;
+  background: rgba(7, 16, 27, 0.64);
+  border: 1px solid rgba(255,255,255,0.08);
   color: #fff;
-  width: 36px;
-  height: 36px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 0.8rem;
-  transition: background var(--transition);
+  font-size: 0.95rem;
+  transition: all var(--transition);
   z-index: 2;
+  backdrop-filter: blur(10px);
 }
 
-.arrow:hover { background: rgba(0, 0, 0, 0.7); }
-.prev { left: 10px; }
-.next { right: 10px; }
+.arrow:hover {
+  background: rgba(7, 16, 27, 0.88);
+  transform: translateY(-50%) scale(1.04);
+}
+
+.prev { left: 16px; }
+.next { right: 16px; }
 
 .dots {
   position: absolute;
-  bottom: 10px;
+  bottom: 14px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 6px;
+  gap: 8px;
   z-index: 2;
 }
 
 .dot {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.45);
   border: none;
   cursor: pointer;
-  transition: background var(--transition);
+  transition: all var(--transition);
   padding: 0;
 }
 
-.dotActive { background: #fff; }
+.dotActive {
+  background: #fff;
+  transform: scale(1.15);
+}
+
+.thumbs {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.thumb {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 0;
+  overflow: hidden;
+  background: var(--surface);
+  cursor: pointer;
+  transition: all var(--transition);
+  aspect-ratio: 16 / 10;
+  opacity: 0.72;
+}
+
+.thumb:hover {
+  transform: translateY(-2px);
+  border-color: rgba(46,168,255,0.28);
+  opacity: 1;
+}
+
+.thumbActive {
+  border-color: rgba(46,168,255,0.46);
+  box-shadow: 0 0 0 3px rgba(46,168,255,0.12);
+  opacity: 1;
+}
+
+.thumbImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1100px) {
+  .thumbs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 768px) {
+  .viewport { border-radius: 18px; }
+  .showcase .slide { padding: 0.5rem; }
+  .arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 0.8rem;
+  }
+  .prev { left: 10px; }
+  .next { right: 10px; }
+  .thumbs { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; }
+  .thumb { border-radius: 12px; }
+}
 
 @media (max-width: 480px) {
-  .arrow { width: 30px; height: 30px; font-size: 0.65rem; }
-  .prev { left: 6px; }
-  .next { right: 6px; }
+  .counter {
+    top: 0.75rem;
+    right: 0.75rem;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.72rem;
+  }
+  .thumbs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dots { bottom: 10px; }
 }

@@ -8,7 +8,7 @@ i18n
   .init({
     lng: localStorage.getItem('portfolio.language') || 'en',
     fallbackLng: 'en',
-    backend: { loadPath: '/locales/{{lng}}/translation.json' },
+    backend: { loadPath: '/locales/{{lng}}/translation.json?v=2026-05-17-portfolio-projects-2' },
     interpolation: { escapeValue: false },
   });
 
