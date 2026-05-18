@@ -3,7 +3,7 @@ import styles from './PersonalData.module.css';
 
 export function PersonalData() {
   const { t } = useTranslation();
-  const cvLink = 'https://my-portifolio-images.s3.us-east-2.amazonaws.com/CV/Rodolfo_Silva_CV.pdf';
+  const cvLink = t('professionalExperiences.cv_link');
   const highlights = [
     { label: 'Stack', value: 'React, NestJS, AWS', icon: 'fas fa-layer-group' },
     { label: 'Experiência', value: '5+ anos', icon: 'fas fa-briefcase' },

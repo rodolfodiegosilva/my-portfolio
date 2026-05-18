@@ -816,7 +816,7 @@
     "close": "Close",
     "stacks": "stacks",
     "download_cv": "Download CV",
-    "cv_link": "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/profile/Rodolfo_Silva_CV.pdf",
+    "cv_link": "https://rodolfo-silva-portfolio-assets.s3.sa-east-1.amazonaws.com/cv/Rodolfo_Silva_CV.pdf",
     "experiences": [
       {
         "position": "Full Stack Developer",
